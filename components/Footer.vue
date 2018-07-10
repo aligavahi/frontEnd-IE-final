@@ -1,6 +1,3 @@
-<head>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
 <template>        
         <footer>
             
@@ -12,10 +9,14 @@
                 <ul>
                     اطلاعات ما
                     <li>
+                        <a href="#">
                        درباره ما
+                        </a>
                     </li>
                     <li>
+                        <a href="#">
                        تماس با ما
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -24,14 +25,10 @@
                 <ul>
                     به ما در رسانه های اجتماعی بپیوندید
                     <li>
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-google-plus"></a>
-                        <a href="#" class="fa fa-twitter"></a>
+                        <SocialLogo/>
                     </li>
                     <li>
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-google-plus"></a>
-                        <a href="#" class="fa fa-twitter"></a>
+                        <SocialLogo/>
                     </li>
                 </ul>
             </div>
@@ -40,16 +37,24 @@
                 <ul>
                     خدمات مشتریان
                     <li>
+                        <a href="#">
                         سوالات متداول
+                        </a>
                     </li>
                     <li>
+                        <a href="#">
                         بازگرداندن کالا
+                        </a>
                     </li>
                     <li>
+                        <a href="#">
                         شرایط استفاده
+                        </a>
                     </li>
                     <li>
+                        <a href="#">
                         حریم شخصی
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -57,34 +62,57 @@
         </footer>
 </template> 
 
+<script >
+  import SocialLogo from '@/components/SocialLogo'
+
+  export default {
+    components:{
+      SocialLogo
+    } 
+}
+</script>
+
+
+
 <style scoped>
     footer {
+         text-align: right;
          display: flex;
          background-color: gainsboro;
+         height: 200px;
     }
     div.big {
       width: 30%;
-      padding: 3%;
+      padding: 8px;
       align-self: center;
     }
 
     div.small {
-      width: 20%;
-      padding: 3%;
+      padding: 4px;
     }
 
     div{
-        font-size: 1em;
+        font-size: .7em;
+        display: flex;
+        height: 100%;
+        margin: 0 2% 0 2%;
     }
 
     ul { 
-         text-align: right;
          list-style-type: none;
          font-weight: bold;
+         height: 100%;
+         margin: 0;
+         padding: 0;
     }
 
-    ul li{
-        font-size: .9em;
-        font-weight: normal;
+
+    a:hover{
+        color: #882222;
     }
+
+    a{
+        color: #666666
+    }
+
 </style>
