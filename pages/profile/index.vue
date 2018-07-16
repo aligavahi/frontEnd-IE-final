@@ -1,14 +1,14 @@
 <template>
-<ImageSlider/>
+  
 </template>
 
 <script>
 
-import ImageSlider from '@/components/ImageSlider'
-
 export default {
   components: {
-    ImageSlider
   }
 }
 </script>
+
+<style>
+</style>
