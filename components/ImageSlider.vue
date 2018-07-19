@@ -1,6 +1,6 @@
 <template>
   
-<div class="w3-content w3-display-container" style="max-width:1200px;max-height:400px; margin:0 5% 0 5%">
+<div id= "cont" class="w3-content w3-display-container" style="max-height:400px;">
   {{ref}}
   <img class="mySlides" src="/image_slider/img1.jpeg" :style="'width:100%; display:' + display[0]">
   <img class="mySlides" src="/image_slider/img2.jpeg" :style="'width:100%; display:' + display[1]">
@@ -60,9 +60,8 @@ export default {
 button {width: 40px; height: 40px;}
 .mySlides{
   height: 300px;
+  width: 100%;
 }
-
-
 
 a{background-color:transparent;-webkit-text-decoration-skip:objects}
 a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
@@ -138,7 +137,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 @media (min-width:993px){.w3-col.l1{width:8.33333%}.w3-col.l2{width:16.66666%}.w3-col.l3{width:24.99999%}.w3-col.l4{width:33.33333%}
 .w3-col.l5{width:41.66666%}.w3-col.l6{width:49.99999%}.w3-col.l7{width:58.33333%}.w3-col.l8{width:66.66666%}
 .w3-col.l9{width:74.99999%}.w3-col.l10{width:83.33333%}.w3-col.l11{width:91.66666%}.w3-col.l12{width:99.99999%}}
-.w3-content{max-width:980px;margin:auto}.w3-rest{overflow:hidden}
+.w3-content{margin:auto}.w3-rest{overflow:hidden}
 .w3-cell-row{display:table;width:100%}.w3-cell{display:table-cell}
 .w3-cell-top{vertical-align:top}.w3-cell-middle{vertical-align:middle}.w3-cell-bottom{vertical-align:bottom}
 .w3-hide{display:none!important}.w3-show-block,.w3-show{display:block!important}.w3-show-inline-block{display:inline-block!important}
