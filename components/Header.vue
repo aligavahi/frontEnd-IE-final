@@ -19,6 +19,11 @@
 
 
 <style scoped>
+form {
+  border: 1px solid black;
+  padding: 0;
+  margin-top: 5px;
+}
 .lower{
     align-content: center;
     border-bottom: 2px solid black;
@@ -57,17 +62,15 @@ ul li:hover{
 
 input[type=text] {
   padding: 6px;
-  margin-top: 8px;
   font-size: 17px;
   border: none;
 }
 
 #search-container button {
   float: left;
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   padding: 6px 10px;
-  margin-top: 8px;
   margin-right: 16px;
   background: #ddd;
   font-size: 17px;
