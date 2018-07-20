@@ -7,13 +7,16 @@
         <div> <span class="red"> {{real_price}} </span> <span class="dec"> {{price}} </span> </div>
         <div class="red"> تومان </div>
   </nuxt-link>
-  <div class="percentage"><span class="middle">{{off_percent}}</span></div>
+  <div class="percentage"><span class="middle">{{off_percent}}%</span></div>
 </span>
 </template>
 
 <script >
 
 export default {
+  computed: {
+    off_percent () { return ((1-this.real_price / this.price)*100).toFixed(1) }
+  },
   props:["src","b_name","p_name","price","real_price"],
   methods: {
       norm(){
@@ -30,7 +33,7 @@ export default {
     return {
       size:".7em",
       color:"rgba(100,100,100,.5)",
-      off_percent:"10%"
+      
     }
   }
 }
@@ -88,7 +91,7 @@ export default {
 }
 
 .middle{
-display: table-cell;
-vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 </style>
