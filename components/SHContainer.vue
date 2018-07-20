@@ -17,17 +17,20 @@
                     {list: 'نام دسته 6' , subl:['نام زیر دسته ۱', 'نام زیر دسته 2', 'نام زیر دسته 3']} 
               ]" />
     <SearchBrand v-if = "type == 'select-brand'" />
+    <SelectColor v-if = "type == 'select-color'" />
   </div>
 </div>
 </template>
 <script >
 import SHList from '@/components/SHList'
 import SearchBrand from '@/components/SearchBrand'
+import SelectColor from '@/components/SelectColor'
 export default {
   props:["title","type"],
   components:{
     SHList,
-    SearchBrand
+    SearchBrand,
+    SelectColor
   },
   methods: {
       toggle(){
