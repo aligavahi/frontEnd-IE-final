@@ -2,8 +2,8 @@
 <div id= "cont" >
   <upper>
     <button @click = "toggle()">
-      <img src="/shcontainer/minus" :style="'display: '+ img1">
-      <img src="/shcontainer/plus" :style="'display: '+ img2">
+      <img src="/shcontainer/minus.svg" :style="'display: '+ img1">
+      <img src="/shcontainer/pluse.svg" :style="'display: '+ img2">
     </button>
     <h5>{{title}}</h5>
   </upper>
@@ -16,16 +16,18 @@
                     {list: 'نام دسته 5' , subl:['نام زیر دسته ۱', 'نام زیر دسته 2', 'نام زیر دسته 3']} ,
                     {list: 'نام دسته 6' , subl:['نام زیر دسته ۱', 'نام زیر دسته 2', 'نام زیر دسته 3']} 
               ]" />
+    <SearchBrand v-if = "type == 'select-brand'" />
   </div>
 </div>
 </template>
 <script >
 import SHList from '@/components/SHList'
-
+import SearchBrand from '@/components/SearchBrand'
 export default {
   props:["title","type"],
   components:{
-    SHList
+    SHList,
+    SearchBrand
   },
   methods: {
       toggle(){
@@ -73,6 +75,7 @@ h5{
 }
 
 button{
+  background-color: transparent;
   width: 20%;
   margin: 2px;
 }
