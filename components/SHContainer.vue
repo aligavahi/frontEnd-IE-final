@@ -3,7 +3,7 @@
   <upper>
     <button @click = "toggle()">
       <img src="/shcontainer/minus.svg" :style="'display: '+ img1">
-      <img src="/shcontainer/pluse.svg" :style="'display: '+ img2">
+      <img src="/shcontainer/plus.svg" :style="'display: '+ img2">
     </button>
     <h5>{{title}}</h5>
   </upper>
